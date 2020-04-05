@@ -207,14 +207,23 @@ O método *count()* pode ser útil para descobrir, como no exemplo mostrado, se 
 1. Escreva um programa que mostre na tela números inteiros de 0 até um valor escolhido pelo usuário. Porém, quando o número for múltiplo de 5, deverá mostrar um X no lugar.
 
 2. Escreva um programa que mostre todas as tabuadas de 1 até 10. O programa não receberá dados do usuário. Quando for executado, deverá mostrar na tela:
+
 Tabuada do 1:
+
 1 x 0 = 0
+
 1 x 1 = 1
+
 ...
+
 Tabuada do 10:
+
 10 x 0 = 0
+
 10 x 1 = 10
+
 ...
+
 10 x 10 = 100
 
 ---
