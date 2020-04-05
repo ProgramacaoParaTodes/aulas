@@ -46,6 +46,8 @@ Isso significa que ela nos ajudará a controlar o fluxo do programa. A cada iter
 
 Neste momento, as iterações dentro do *while* terminam e a linha *print("Fim")* é executada.
 
+**Aninhando outros blocos de código dentro do while**
+
 Também vimos que podemos colocar outros blocos de código dentro do *while* como, por exemplo, o *if*.
 
 No exemplo a seguinte, queremos mostrar na tela somente os números pares de 0 até um determinado número.
@@ -67,10 +69,10 @@ Vamos entender o código passo-a-passo:
 1. Primeiro eu peço para o usuário digitar o valor que limitará a execução do programa. Se ele digitar *9*, por exemplo, o programa deverá exibir na tela os números 0, 2, 4, 6 e 8.
 2. A variável **counter** (nosso contador) inicia com o valor 0, afinal, queremos imprimir o zero! Dentro do *while* ela será incrementada até que a condição *counter <= max_number* seja falsa.
 3. Dentro do *while* temos um *if* que verifica se a divisão de  *counter* por 2 tem resto zero. (Lembram da operação com **%**?) Se o resto é zero, significa que o número é par; caso contrário, é ímpar.
-4. Note que a variável **counter** sempre será incrementada, independentemente do que ocorre no *if*. 
+4. Note que a variável **counter** sempre será incrementada dentro do *while*, independentemente do que ocorre no *if*. 
 5. Quando a condição *counter <= max_number* se tornar falsa, a linha *print("\nPronto!")* será executada.
 
-Colocando a execução do código em uma tabela, temos:
+Colocando a execução do código em uma tabela, temos o seguinte:
 
 | Iteração | counter | counter <= max_number |  counter % 2 == 0 | print(counter) | counter += 1 |
 |:--------:|:-------:|:---------------------:|:-----------------:|:--------------:|:------------:|
@@ -83,9 +85,43 @@ Colocando a execução do código em uma tabela, temos:
 |    7a.   |    6    | 6 <= 6: True          | 6 % 2 == 0: True  |        6       |       7      |
 |    8a.   |    7    | 7 <= 6: False         |                   |                |              |
 
-Através da tabela, podemos ver que somente na 8a. iteração é que o *counter* atinge um valor que torna a condição *counter <= max_number* falsa. Isso faz com que o programa "saia" do *while*.
+A 1a. iteração é a primeira vez que a execução do programa "bate" na linha do *while* e como *0 <= 6* é True, passará para a linha que tem o *if*.
+
+A 8a. iteração é a última vez que a execução do programa "bate" na linha do *while* pois *7 <= 6* é False, portanto, a próxima linha a ser executada é *print("\nPronto!")*.
+
+**Utilizando uma variável como acumulador**
+
+Vimos também a situação de queremos somar 10 números distintos e exibir o valor da soma na tela.
+
+```python
+counter = 1        
+total_sum = 0     
+
+while counter <= 10:
+    number = int(input("Digite o %do. número: " % counter)) 
+    total_sum = total_sum + number
+    counter += 1
+
+print("Soma: %d" % total_sum)
+```
+
+A variável *total_sum* é o nosso acumulador porque ela irá guardar o total da soma. A cada iteração no *while* ela receberá o valor dela mesma acrescido do número digitado.
+
+Quando estamos acumulando valores somados, inicializamos nosso acumulador com 0. Caso o acúmulo seja feito através de uma multiplicação, inicializamos a variável com o valor 1.
+
+O valor total da soma é exibido **fora** do *while*, **depois** que as iterações terminaram. 
+
+**Repetição indefinida e o comando *break***
+
+Até agora, vimos exemplos nos quais nós determinados a condição do *while*. 
+
+Existe a possibilidade de termos o *while* combinado com True, isso fará com que a repetição ocorra indefinidamente até que **algo ocorra**. 
 
 ## Exercícios
+
+1. 
+
+2. 
 
 ---
 
