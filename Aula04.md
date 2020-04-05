@@ -1,6 +1,6 @@
 # Aula 04
 
-Vamos relembrar o que foi visto na aula quarta online e vamos dar alguns passinhos a mais até a próxima aula ;) No final do texto, você encontra alguns exercícios para praticar.
+Vamos relembrar o que foi visto na aula quarta oonline e vamos dar alguns passinhos a mais até a próxima aula ;) No final do texto, você encontra alguns exercícios para praticar.
 
 ### while
 
@@ -117,12 +117,106 @@ Até agora, vimos exemplos nos quais nós determinados a condição do *while*.
 
 Existe a possibilidade de termos o *while* combinado com True, isso fará com que a repetição ocorra indefinidamente até que **algo ocorra**. 
 
+Vejamos o exemplo a seguir:
+
+```python
+total_sum = 0
+
+while True:
+    number = int(input("Digite um número inteiro para somar ou digite 0 para encerrar a soma: ")) 
+    if number == 0:
+        break 
+    total_sum += number
+
+print(total_sum)
+```
+
+Não há uma condição a ser verificada no *while*, apenas o True. 
+
+Neste programa, o usuário deverá digitar um número inteiro para ser somado ou digitar 0 para encerrar a soma. Se ele digitar números inteiros diferentes de zero indefinidamente, a soma continuará ocorrendo.
+
+Temos um *if* dentro do *while* que verifica se o número digitado é 0 e, caso seja isso mesmo, temos o comando **break** ali. 
+
+Esse comando faz com que a execução do programa prossiga para fora do *while*. Ou seja: se o usuário digitar o número 0, a próxima linha a ser executada é a linha *print(total_sum)*.
+
+Outro ponto imporante: assim como vimos que *counter = counter + 1* também pode ser escrito como *counter += 1*, temos aqui a linha *total_sum += number* que significa exatamente *total_sum = total_sum + number*.
+
+**Decréscimo de valores no contador**
+
+Até o momento, vimos os contadores recebendo acréscimos. Podemos ter contadores que fazem decréscimos!
+
+Vejamos o exemplo:
+
+```python
+start = int(input("Digite o início da contagem regressiva: \n"))
+
+print("\n")
+
+while 0 <= start:
+    print(start)
+    start -= 1
+
+print("\n")
+print("Fogo! 🚀")
+```
+
+Este código faz uma contagem regressiva a partir do início estipulado pelo usuário. Veja que o valor inicial da contagem regressiva - a variável **start** - é o próprio contador.
+
+Dentro do *while*, a variável **start** sofre um decréscimo de 1. Temos ali *start -= 1* que é análogo a *start = start - 1*.
+
+### Extras
+
+Para aumentar um pouquinho o repertório de métodos de strings, vou deixar alguns novos aqui para que vocês utilizem nos exercícios ;)
+
+**upper()**
+
+Transforma todas as letras em maiúsculas.
+
+```python
+message = "Fica em casa!"
+message_uppercase = message.upper()
+print(message_uppercase)    # mostra na tela: FICA EM CASA!
+```
+
+**lower()**
+
+Transforma todas as letras em minúsculas.
+
+```python
+message = "HAHAHAHAHAHAHAHA"
+message_lowercase = message.lower()
+print(message_lowercase)    # mostra na tela: hahahahahahahaha
+```
+
+**count()**
+
+Conta o número de vezes que um determinado texto aparece na string.
+
+```python
+email = "usuario@provedor.com.br"
+at_sign = email.count("@")
+print(at_sign)
+```
+
+Esses métodos podem ser úteis de diversas formas, por exemplo, em um programa que o usuário precise escolher a opção A ou B. Ao pegar o input do usuário, você pode converter com o método *upper()* e só depois verificar se foi A ou B que ele digitou. 
+
+O método *count()* pode ser útil para descobrir, como no exemplo mostrado, se o usuário digitou o e-mail mais próximo do valor válido, ou seja, com apenas uma @. 
+
 ## Exercícios
 
-1. 
+1. Escreva um programa que mostre na tela números inteiros de 0 até um valor escolhido pelo usuário. Porém, quando o número for múltiplo de 5, deverá mostrar um X no lugar.
 
-2. 
+2. Escreva um programa que mostre todas as tabuadas de 1 até 10. O programa não receberá dados do usuário. Quando for executado, deverá mostrar na tela:
+Tabuada do 1:
+1 x 0 = 0
+1 x 1 = 1
+...
+Tabuada do 10:
+10 x 0 = 0
+10 x 1 = 10
+...
+10 x 10 = 100
 
 ---
 
-**Desafio:**
+**Desafio:** Escreva um programa que fornecerá a nota de um usuário com base nas respostas que ele dará para 5 questões. Cada questão terá somente duas alternativas: A ou B. O gabarito das questões é o seguinte: 1-A, 2-B, 3-B, 4-A e 5-B. O usuário deverá digitar o nome e depois a resposta para cada questão. No final, você deverá exibir o nome do usuário, o total de questões que ele acertou e a nota final sabendo que cada questão vale 2 pontos.
