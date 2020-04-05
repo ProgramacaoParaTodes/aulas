@@ -1,12 +1,12 @@
 # Aula 04
 
-Vamos relembrar o que foi visto na aula quarta oonline e vamos dar alguns passinhos a mais até a próxima aula ;) No final do texto, você encontra alguns exercícios para praticar.
+Vamos relembrar o que foi visto na aula quarta online e vamos dar alguns passinhos a mais até a próxima aula ;) No final do texto, você encontra alguns exercícios para praticar.
 
 ### while
 
 Aprendemos a utilizar o while para fazer repetições. 
 
-Vimos que podemos escrever uma repetição de comandos de uma maneira mais automatizada. Então, o problema de imprimir os números de 0 até 5 sem usar o *print()* pode ser resolvido da seguinte maneira:
+Vimos que podemos escrever uma repetição de comandos de uma maneira mais automatizada. Então, o problema de imprimir os números de 0 até 5 sem usar o *print()* cinco vezes pode ser resolvido da seguinte maneira:
 
 ```python
 x = 0
