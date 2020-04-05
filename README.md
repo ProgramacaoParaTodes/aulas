@@ -22,7 +22,7 @@ Até o momento, tivemos as seguintes aulas:
 
 [Aula 04](Aula04.md)
 
-O conteúdo das aulas até o presente momento é sobre **Lógica de Programação** e introdução ao [**Python**](https://github.com/python).
+O conteúdo das aulas até o presente momento é sobre **Lógica de Programação** e **Introdução ao [Python](https://github.com/python)**.
 
 Para as aulas online, utilizamos o [Jitsi](https://github.com/jitsi), um projeto open source muito maneiro!
 
