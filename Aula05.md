@@ -288,7 +288,7 @@ O nome dessa variável temporária poderia ser qualquer coisa, mas temos que ter
 
 Como podemos imaginar, esse trecho de código mostrará na tela:
 
-```python
+``
 Eu gosto de assistir La Casa de Papel
 Eu gosto de assistir Orange Is The New Black
 Eu gosto de assistir Perdidos no Espaço
@@ -296,7 +296,7 @@ Eu gosto de assistir Lúcifer
 Eu gosto de assistir Altered Carbon
 Eu gosto de assistir Gracie and Frankie
 Eu gosto de assistir Grey's Anatomy
-```
+``
 
 Podemos realizar mais comandos dentro do **for**, veja o exemplo a seguir:
 
@@ -316,7 +316,7 @@ O **for** percorrerá a lista *numbers*. Para cada *number* dentro de *numbers*,
 
 Esse trecho de código mostrará na tela:
 
-```python
+``
 4 é par
 5 é ímpar
 1 é ímpar
@@ -334,6 +334,6 @@ Esse trecho de código mostrará na tela:
 9 é ímpar
 
 Fim do teste!
-```
+``
 
 Note que não precisamos nos preocupar com o tamanho da lista: todos os números foram testados. E, note também que, assim que o **for** percorreu toda a lista, o comando *print("\nFim do teste!")* foi executado no fluexo natural do código.
