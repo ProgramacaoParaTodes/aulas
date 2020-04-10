@@ -1,6 +1,6 @@
 # Aula 05
 
-Vamos relembrar o que foi visto na quinta aula online e vamos dar alguns passinhos a mais até a próxima aula ;) No final do texto, você encontra alguns exercícios para praticar.
+Vamos relembrar o que foi visto na quinta aula online ;) No final do texto, você encontra alguns exercícios para praticar.
 
 ### Listas
 
@@ -288,7 +288,7 @@ O nome dessa variável temporária poderia ser qualquer coisa, mas temos que ter
 
 Como podemos imaginar, esse trecho de código mostrará na tela:
 
-``
+```
 Eu gosto de assistir La Casa de Papel
 Eu gosto de assistir Orange Is The New Black
 Eu gosto de assistir Perdidos no Espaço
@@ -296,7 +296,7 @@ Eu gosto de assistir Lúcifer
 Eu gosto de assistir Altered Carbon
 Eu gosto de assistir Gracie and Frankie
 Eu gosto de assistir Grey's Anatomy
-``
+```
 
 Podemos realizar mais comandos dentro do **for**, veja o exemplo a seguir:
 
@@ -316,7 +316,7 @@ O **for** percorrerá a lista *numbers*. Para cada *number* dentro de *numbers*,
 
 Esse trecho de código mostrará na tela:
 
-``
+```
 4 é par
 5 é ímpar
 1 é ímpar
@@ -334,6 +334,41 @@ Esse trecho de código mostrará na tela:
 9 é ímpar
 
 Fim do teste!
-``
+```
 
 Note que não precisamos nos preocupar com o tamanho da lista: todos os números foram testados. E, note também que, assim que o **for** percorreu toda a lista, o comando *print("\nFim do teste!")* foi executado no fluexo natural do código.
+
+## Exercícios
+
+1. Escreva um programa que crie uma lista com números inteiros de 1 até o número que o usuário digitar. Peça para que o usuário digite um número igual ou maior que 20 e valide essa informação. Percorra essa lista verificando quais são os números múltiplos de 2, 3 e 5 e salve-os em listas separadas para cada múltiplo. No final, exiba as informações conforme solicitado:
+```
+Lista original: [ colocar a lista aqui ]
+Múltiplos de 2: [ mostrar a lista dos múltiplos de 2 ]
+Múltiplos de 3: [ mostrar a lista dos múltiplos de 3 ]
+Múlplicos de 5: [ mostrar a lista dos múltiplos de 5 ]
+```
+
+2. Escreva um programa que pergunte ao usuário quais são seus 10 artistas da música (bandas, cantores ou cantoras) favoritos. Se o usuário não digitar nada e pressionar Enter, você não deve avançar na posição da lista. Ele terá obrigatoriamente que digitar algo. Em seguida, mostre a lista para o usuário da seguinte maneira: 
+```
+1o lugar - Fulano
+2o lugar - Banda X
+...
+```
+Pergunte se ele está feliz com a ordem da lista. Se ele estiver, finalize. 
+Se não estiver, pergunte a posição do artista que ele gostaria de colocar em 1o. lugar e faça a troca. Após realizada essa troca, mostre a lista novamente e finalize.
+
+---
+
+**Desafio:** Crie um programa em que você possa:
+```
+- Cadastrar uma série. Não pode repetir o nome! (Opção C)
+- Visualizar as séries cadastradas. (Opção V)
+- Editar o nome de uma série cadastrada numa determinada posição. (Opção E)
+- Deletar uma série cadastrada numa determinada posição. (Opção D)
+- Resetar o cadastro de séries (Opção R)
+``` 
+O programa deverá oferecer as opções para o usuário. Sempre que for pedido para exibir as séries cadastradas, você deverá mostrar da seguinte maneira:
+```
+Posição - Nome da série
+```
+Também deverá ser oferecida a opção SAIR quando o usuário digitar S.
