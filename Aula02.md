@@ -1,6 +1,6 @@
 # Aula 02
 
-Vamos relembrar o que foi visto na aula segunda online e vamos dar alguns passinhos a mais até a próxima aula ;) No final do texto, você encontra alguns exercícios para praticar.
+Vamos relembrar o que foi visto na segunda aula online e vamos dar alguns passinhos a mais até a próxima aula ;) No final do texto, você encontra alguns exercícios para praticar.
 
 ### Variáveis
 

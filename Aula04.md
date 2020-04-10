@@ -1,6 +1,6 @@
 # Aula 04
 
-Vamos relembrar o que foi visto na aula quarta online e vamos dar alguns passinhos a mais até a próxima aula ;) No final do texto, você encontra alguns exercícios para praticar.
+Vamos relembrar o que foi visto na quarta aula online e vamos dar alguns passinhos a mais até a próxima aula ;) No final do texto, você encontra alguns exercícios para praticar.
 
 ### while
 
