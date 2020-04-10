@@ -1,6 +1,6 @@
 <div align="center"><img src="./img/logo.png" width="40%"></div>
 
-O **Programação para Todes** foi ficado para promover a diversidade e a equidade na área de TI. 
+O **Programação para Todes** foi criado para promover a diversidade e a equidade na área de TI. 
 
 A ideia inicial era ministrar aulas presenciais, porém, na falta de um local físico, o projeto ainda não tinha começado.
 
