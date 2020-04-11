@@ -173,7 +173,7 @@ print(junk_food)        # mostra ['sorvete', 'batata frita', 'pizza']
 
 **Alterando um elemento específicio**
 
-Podemos alterar o conteúdo de um elemento específico utilizando a sintaxe *variavel[posição] = "novo valor do elemento naquela posição*.
+Podemos alterar o conteúdo de um elemento específico utilizando a sintaxe *variavel[posição] = novo valor do elemento naquela posição*.
 
 Continuaremos com o mesmo exemplo e, neste ponto, junk_food contém os elementos ['sorvete', 'batata frita', 'pizza'].
 
@@ -336,7 +336,7 @@ Esse trecho de código mostrará na tela:
 Fim do teste!
 ```
 
-Note que não precisamos nos preocupar com o tamanho da lista: todos os números foram testados. E, note também que, assim que o **for** percorreu toda a lista, o comando *print("\nFim do teste!")* foi executado no fluexo natural do código.
+Note que não precisamos nos preocupar com o tamanho da lista: todos os números foram testados. E, note também que, assim que o **for** percorreu toda a lista, o comando *print("\nFim do teste!")* foi executado no fluxo natural do código.
 
 ## Exercícios
 
