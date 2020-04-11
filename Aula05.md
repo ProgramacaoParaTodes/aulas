@@ -129,14 +129,14 @@ del music[4:7]  # remove a fatia que vai do item 4 ao item 6
 print(music)    # mostra as minhas preferências musicais ['Rock', 'Pop', 'Anos 80', 'Anos 90', 'Clássica', 'New Age'] ;)
 ```
 
-**somando uma lista à outra pré-existente**
+**somando uma lista a outra pré-existente**
 
 Acrescenta os itens da lista somada à lista que já existia, resultando em uma lista maior.
 
 ```python
 empty_list = []                         # lista vazia
 
-empty_list += ["blablabla", "oioioi"]   # somo os itens ["blablabla", "oioioi"] 
+empty_list += ["blablabla", "oioioi"]   # somou os itens ["blablabla", "oioioi"] 
 
 print(empty_list)                       # mostra ['blablabla', 'oioioi'], que é a minha lista atual
 
