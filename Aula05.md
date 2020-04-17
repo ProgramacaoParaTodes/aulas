@@ -340,7 +340,8 @@ Note que não precisamos nos preocupar com o tamanho da lista: todos os números
 
 ## Exercícios
 
-1. Escreva um programa que crie uma lista com números inteiros de 1 até o número que o usuário digitar. Peça para que o usuário digite um número igual ou maior que 20 e valide essa informação. Percorra essa lista verificando quais são os números múltiplos de 2, 3 e 5 e salve-os em listas separadas para cada múltiplo. No final, exiba as informações conforme solicitado:
+1. Escreva um programa para criar uma lista com números inteiros de 1 até o número que o usuário digitar. Você vai pedir para que o usuário digite esse número e ele tem que ser igual ou maior que 20. Valide essa informação depois que ela for digitada. Percorra essa lista verificando quais são os números múltiplos de 2, 3 e 5 e salve-os em listas separadas para cada múltiplo. No final, exiba as informações conforme solicitado:
+
 ```
 Lista original: [ colocar a lista aqui ]
 Múltiplos de 2: [ mostrar a lista dos múltiplos de 2 ]
