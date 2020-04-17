@@ -199,12 +199,82 @@ Já a variável *tel_SP* recebe o retorno da função *tel_SP = cadastrar_contat
 
 ## Tuplas
 
+A maneira mais simples de definir o que são as tuplas é dizendo que são como as listas, porém, são imutáveis.
+
+Uma vez que definimos uma tupla, **não** podemos mais adicionar, editar nem remover seus elementos.
+
+Podemos utilizar os mesmos métodos que utilizamos para listas, como por exemplo, o *len()*. Mas **não** podemos utilizar o *append()* uma vez que esse é um método para alterar uma lista.
+
+Veja o exemplo de uma tupla:
+
+```python
+meses = ("Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro")
+```
+
+Repare que, diferente das listas, as tuplas utilizam parênteses. 
+
+Por que definir uma tupla de meses e não uma lista? É simples! Os meses do ano são sempre os mesmos. Então, por que eu deveria utilizar uma estrutura de dado que permitisse alterações? 
+
+A organização dos elementos dentro da tupla também segue a lógica das listas: o primeiro elemento ocupa a posição 0, o segundo ocupa a posição 1 e assim sucessivamente.
+
+Veja o exemplo a seguir:
+
+```python
+def nome_do_mes(mes):
+  meses = ("Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro")
+  mes = mes - 1
+  return meses[mes]
+
+mes = nome_do_mes(5)
+print(mes)                    # mostra Maio
+
+outro_mes = nome_do_mes(8)
+print(outro_mes)              # mostra Agosto
+```
+
+Neste exemplo, temos uma função que recebe o número do mês e retorna seu nome. 
+
+Se quisessemos obter o nome do mês 1, que é janeiro, precisaríamos chamar a função *nome_do_mes* passando o número 1 como argumento. 
+
+Internamente, "Janeiro" ocupa a posição 0 da tupla *meses*. Por esse motivo, para acessarmos esse valor, precisamos tirar 1 unidade do valor passado através do argumento *mes*. 
+
+Se não fizéssemos isso, ao chamar a função *nome_do_mes(1)*, o resultado seria "Fevereiro", que é o valor residente na posição 1 da tupla.
+
+Nós também podemos utilizar as tuplas para retornar valores numa função. Veja:
+
+```python
+meses = ("Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro")
+
+def fatiar(data):
+  dia = int(data[0:2])
+  mes = int(data[3:5])
+  ano = int(data[6:10])
+  return (dia, mes, ano, meses[mes-1])
+
+info = fatiar("04/05/1983")
+
+print(info)   # mostra (4, 5, 1983, 'Maio')
+
+# mostra Você nasceu no dia 4 de Maio de 1983
+print("Você nasceu no dia %d de %s de %d" % (info[0], info[3], info[2]))
+```
+
+Aqui, o retorno da função é uma tupla. Isso faz com que o retorno não possa ser alterado. Caso eu queira obter um novo retorno, devo chamar a função novamente passando outros argumentos.
+
+A função do exemplo recebe uma data no formato dd/mm/aaaa e devolve ao usuário uma tupla contendo a data "fatiada" em dia, mês e ano e também o nome do mês.
+
+O dia está na posição 0, o mês na posição 1, o ano na posição 2 e o nome do mês na posição 3.
+
+Quando fazemos *print(info)*, a tupla é mostrada na tela de maneira bem semelhante à lista só que com parênteses.
+
+E quando fazemos *print("Você nasceu no dia %d de %s de %d" % (info[0], info[3], info[2]))*, três dos quatro valores da tupla são acessados para montar a frase.
+
 ## Exercícios
 
-1. 
+1. Escreva um programa para digitar nomes de alunos em uma lista. O programa deverá pedir a quantidade de alunos que você deseja inserir o nome. Através de uma função, os nomes deverão ser validados antes de serem adiconados à lista. Essa função deverá verificar se o nome digitado contém algum número (que seria um erro de digitação, por exemplo) e se o nome digitado não está "vazio" (o digitador pressionou Enter sem digitar alguma coisa). Se o nome digitado for válido, a função deverá retornar True e se for inválido, False. Você deverá obrigatoriamente utilizar esse resultado para definir se o nome será inserido na lista ou não.
 
-2. 
+2. Escreva um programa para cadastrar os dados de um funcionário. Você deverá digitar os dados normalmente. O programa deverá ter uma função que receberá esses dados e dentro dela deve existir a tupla cargos com os seguintes valores, nessa ordem: Desenvolvedor(a), Estagiário(a), Gerente, Testador(a) de Software. Os argumentos obrigatórios são: nome, sobrenome e data de nascimento no formato dd/mm/aaaa. O argumento opcional é o cargo. O valor *default* para o cargo é 0. O retorno da função deverá ser uma tupla com o e-mail e a senha do usuário. A regra para a formação do e-mail é nome.sobrenome@empresa.com.br e a regra para a formação de senha é inicial do nome + inicial do sobrenome + mês de nascimento. Utilize esse retorno para mostrar na tela o e-mail e a senha do usuário.
 
 ---
 
-**Desafio:** 
+**Desafio:** Escreva um programa que simule um "Supermercado". Ele deverá pedir na tela o nome do produto, o valor e a quantidade. Ao terminar a leitura, deverá mostrar o valor da compra. Utilize funções e tuplas como desejar ;)

@@ -8,9 +8,9 @@ Quando iniciamos o isolamento social por conta do COVID-19, resolvi oferecer as 
 
 **As aulas são totalmente gratuitas, uma das premissas do projeto.**
 
-Após cada aula, preparo um resumão com o que foi visto naquele dia e acrescento mais algumas coisinhas. 
+Após cada aula, preparo um resumão com o que foi visto naquele dia e, às vezes, acrescento mais algumas coisinhas. 
 
-No final de cada aula, há uma pequena lista com exercícios e um desafio.
+No final de cada aula, há uma lista com exercícios e um desafio.
 
 Até o momento, tivemos as seguintes aulas:
 
@@ -28,9 +28,11 @@ Até o momento, tivemos as seguintes aulas:
 
 [Aula 07](Aula07.md)
 
-O conteúdo das aulas até o presente momento é sobre **Lógica de Programação** e **Introdução ao [Python](https://github.com/python)**.
+O conteúdo das aulas é sobre **Lógica de Programação** e **Introdução ao [Python](https://github.com/python)**.
 
-Para as aulas online, utilizamos o [Jitsi](https://github.com/jitsi), um projeto open source muito maneiro!
+Nas aulas online, utilizamos o [Jitsi](https://github.com/jitsi), um projeto open source muito maneiro!
+
+Para codar, utilizamos a versão gratuita do [Repl.it](https://repl.it/).
 
 ---
 
