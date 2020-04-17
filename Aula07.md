@@ -52,11 +52,9 @@ def validar(email):
   else:
     print("E-mail inválido")
 
-email1 = input("Digite um e-mail: ")
-validar(email1)
+validar("programacaoparatodes@gmail.com")
 
-email2 = input("Digite outro e-mail: ")
-validar(email2)
+validar("emailerrado@blabla")
 ```
 
 Temos uma função chamada *validar*. Repare que aqui o nome da função é seguido de parênteses e, dentro deles, temos a palavra *email*.
@@ -64,6 +62,41 @@ Temos uma função chamada *validar*. Repare que aqui o nome da função é segu
 Isso significa que essa função possui um **argumento** que deverá ser **passado** quando ela for **chamada**.
 
 Em outras palavras, quando quisermos utilizar essa função, não podemos simplesmente chamá-la escrevendo *validar()* porque ela **espera** que um argumento seja passado. Se chamarmos a função sem o argumento que ela espera, o código quebra! :(
+
+Quando chamamos a função, colocamos entre parênteses o valor que deverá *ocupar* o lugar do argumento. 
+
+Veja que utilizamos a função duas vezes nesse exemplo. 
+
+Na 1a. utilização, chamamos a função *validar* passando a string *programacaoparatodes@gmail.com* como argumento. 
+
+O resultado esperado é que apareça na tela a frase "E-mail válido".
+
+Na 2a. utilização, chamado a função *validar* passando a string *emailerrado@blabla* como argumento. 
+
+O resultado esperado é que apareça na tela a frase "E-mail inválido".
+
+Mas como isso aconteceu?
+
+Quando chamamos a função e passamos um valor dentro dos parênteses, esse valor assume o lugar do argumento. Na declaração da função, o "nome" do argumento é *email*. 
+
+Quando chamamos a função pela 1a. vez nesse código, o argumento *email* lá da declaração da função é substituido por "programacaoparatodes@gmail.com". 
+
+Em outras palavras, quando a linha *validar("programacaoparatodes@gmail.com")* é executada, **dentro da função**, em todos os pontos onde pudermos ler *email*, é como se estivessemos lendo "programacaoparatodes@gmail.com". 
+
+Vamos utilizar um exemplo mais enfático para perceber como isso funciona:
+
+```python
+def teste(banana):
+  print("Vou imprimir o argumento aqui ó: %s" % banana)
+
+teste("Meu argumento :)")
+```
+
+O resultado desse código meio nonsense é mostrar na tela "Vou imprimir o argumento aqui ó: Meu argumento :)".
+
+Se o meu argumento é *banana*, todas as vezes que *banana* aparecer dentro do código da função significa que estou fazendo referência ao argumento. 
+
+**Atenção:** Em funções com dois ou mais argumentos, devemos passá-los na mesma ordem em que foram colocados na definição da função. 
 
 **Retornando valores**
 
@@ -133,6 +166,38 @@ Dentro da função podemos utilizar essa variável tranquilamente para fazer o p
 Do lado de fora da função, podemos utilizar o print para verificar o valor da variável *resultado*. Isso mostrará na tela *Resultado: 9*.
 
 Porém, também do lado de fora da função, quando tentamos utilizar o print com a variável *soma*, **não** teremos sucesso. O código quebra! 
+
+**Atenção:** Precisamos ter muito cuidado na utilização das variáveis. Não tente acessar variáveis locais fora da função! 
+
+**Funções com atributos opcionais**
+
+Até o momento, vimos duas possíveis situações para as funções: elas não terem argumentos e elas terem argumentos obrigatórios.
+
+Existe a possibilidade de termos argumentos opcionais em uma função. Vejamos o exemplo a seguir:
+
+```python
+def cadastrar_contato(telefone, ddd="21"):
+  completo = "(" + ddd + ") " + telefone
+  return completo
+
+tel_RJ = cadastrar_contato("99999-1234")
+print(tel_RJ)
+
+tel_SP = cadastrar_contato("99999-5678", "11")
+print(tel_SP)
+```
+
+Temos uma função que recebe dois argumentos: *telefone* e *ddd*. Logo na definição da função, percebemos algo diferente: o argumento ddd já está com um valor.
+
+Isso quer dizer que, ao chamarmos a função, se **não** passarmos um valor para *ddd*, ele vai assumir o valor que está pré-definido ali. Mas, se passarmos um valor para *ddd*, então será utilizado o valor que passarmos.
+
+A variável *tel_RJ* recebe o retorno da função *cadastrar_contato("99999-1234")*. Não foi passado um valor para o *ddd*. Quando a linha *print(tel_RJ)* é executada, o valor *(21) 99999-1234* é mostrado.
+
+Já a variável *tel_SP* recebe o retorno da função *tel_SP = cadastrar_contato("99999-5678", "11")*. Aqui está sendo passado o valor "11" para o *ddd*, então quando a linha *print(tel_SP)* é executada, o valor *(11) 99999-5678* é mostrado.
+
+**Atenção:** Os argumentos obrigatórios devem vir primeiro na declaração da função.
+
+## Tuplas
 
 ## Exercícios
 
