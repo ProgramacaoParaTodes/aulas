@@ -71,7 +71,7 @@ Na 1a. utilização, chamamos a função *validar* passando a string *programaca
 
 O resultado esperado é que apareça na tela a frase "E-mail válido".
 
-Na 2a. utilização, chamado a função *validar* passando a string *emailerrado@blabla* como argumento. 
+Na 2a. utilização, chamamos a função *validar* passando a string *emailerrado@blabla* como argumento. 
 
 O resultado esperado é que apareça na tela a frase "E-mail inválido".
 
@@ -129,7 +129,7 @@ Na última linha da função, temos o *return* seguido da concatenação das str
 
 Esse **retorno da função** é automaticamente salvo na variável *senha*.
 
-Então, quando utilizamos a linha *print(senha)* é executada, ela mostra *Eri1983*.
+Então, quando a linha *print(senha)* é executada, ela mostra *Eri1983*.
 
 ***Variável local x variável global***
 
@@ -139,7 +139,7 @@ Depois que a última linha da função é executada, ou seja, quando ocorre o *r
 
 Se tentarmos acessar essas variáveis, por exemplo, fazendo *print(parte1)* e/ou *print(parte2)* **fora** da função, o código quebra!
 
-Já a variável *senha* pode ser acessada de qualquer ponto do código. Isso faz com que ela seja uma variável global.
+Já a variável *senha* pode ser acessada de qualquer ponto do código. Isso faz com que ela seja uma **variável global**.
 
 Veja mais um exemplo para fixar o conceito:
 
@@ -181,19 +181,19 @@ def cadastrar_contato(telefone, ddd="21"):
   return completo
 
 tel_RJ = cadastrar_contato("99999-1234")
-print(tel_RJ)
+print(tel_RJ)     # mostra (21) 99999-1234
 
 tel_SP = cadastrar_contato("99999-5678", "11")
-print(tel_SP)
+print(tel_SP)     # mostra (11) 99999-5678
 ```
 
 Temos uma função que recebe dois argumentos: *telefone* e *ddd*. Logo na definição da função, percebemos algo diferente: o argumento ddd já está com um valor.
 
 Isso quer dizer que, ao chamarmos a função, se **não** passarmos um valor para *ddd*, ele vai assumir o valor que está pré-definido ali. Mas, se passarmos um valor para *ddd*, então será utilizado o valor que passarmos.
 
-A variável *tel_RJ* recebe o retorno da função *cadastrar_contato("99999-1234")*. Não foi passado um valor para o *ddd*. Quando a linha *print(tel_RJ)* é executada, o valor *(21) 99999-1234* é mostrado.
+A variável *tel_RJ* recebe o retorno da função *cadastrar_contato("99999-1234")*. Não foi passado um valor para o *ddd*. Quando a linha *print(tel_RJ)* é executada, o valor "(21) 99999-1234" é mostrado.
 
-Já a variável *tel_SP* recebe o retorno da função *tel_SP = cadastrar_contato("99999-5678", "11")*. Aqui está sendo passado o valor "11" para o *ddd*, então quando a linha *print(tel_SP)* é executada, o valor *(11) 99999-5678* é mostrado.
+Já a variável *tel_SP* recebe o retorno da função *tel_SP = cadastrar_contato("99999-5678", "11")*. Aqui está sendo passado o valor "11" para o *ddd*, então quando a linha *print(tel_SP)* é executada, o valor "(11) 99999-5678" é mostrado.
 
 **Atenção:** Os argumentos obrigatórios devem vir primeiro na declaração da função.
 
