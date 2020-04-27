@@ -174,7 +174,7 @@ A segunda é com o **pop**:
 produtos.pop("caneta")
 ```
 
-Esse comando tem exatamente o mesmo efeito do **del**.
+Esse método tem exatamente o mesmo efeito do **del**.
 
 **Limpar x Deletar**
 
@@ -209,12 +209,159 @@ Se acessarmos o dicionario1, ele continua existindo, porém, vazio.
 
 Se acessarmos o dicionario2, o programa quebra porque depois do **del**, ele deixa de existir.
 
+**Iterando em dicionários**
+
+Assim como fazemos em listas, podemos iterar em dicionários utilizando o **for**.
+
+Podemos fazer uma iteração que nos permita acessar chaves e valores do dicionário.
+
+Veja:
+
+```python
+estudante = { 
+  "nome": "Fulana de Tal",
+  "email": "fulana@provedor.com.br",
+  "curso": "Ciência da Computação",
+  "semestre": 4,
+  "CR": 9.5
+}
+
+for chave, valor in estudante.items():
+  print(chave, valor)
+```
+
+Aqui, precisamos utilizar o método **items()** para que possamos ter acesso aos valores do dicionário.
+
+Note que temos duas variáveis temporárias: *chave* e *valor*. 
+
+Poderíamos ter usado qualquer outro nome para essas variáveis, basta ter em mente que, dentro do **for**, precisamos utilizar os mesmos nomes. 
+
+No exemplo, quando é feito o *print* dentro do **for**, utilizamos as variáveis temporárias "chave" e "valor".
+
+Como retorno desta iteração, teremos na tela as seguintes informações:
+
+```
+nome Fulana de Tal
+email fulana@provedor.com.br
+curso Ciência da Computação
+semestre 4
+CR 9.5
+```
+
+Podemos perceber que o primeiro elemento de cada linha impressa é o nome da chave seguido de seu valor, sem maiores formatações porque utilizamos apenas *print(chave, valor)*. 
+
+Seguindo o mesmo exemplo, podemos fazer uma iteração acessando somente os nomes das chaves do dicionário:
+
+```python
+estudante = { 
+  "nome": "Fulana de Tal",
+  "email": "fulana@provedor.com.br",
+  "curso": "Ciência da Computação",
+  "semestre": 4,
+  "CR": 9.5
+}
+
+for chave in estudante:
+  print(chave)
+```
+
+O retorno que teremos em tela é:
+
+```
+nome
+email
+curso
+semestre
+CR
+```
+
+Ou seja, somente as chaves são exibidas.
+
+Também podemos fazer uma iteração acessando somente os valores de cada chave do dicionário:
+
+```python
+estudante = { 
+  "nome": "Fulana de Tal",
+  "email": "fulana@provedor.com.br",
+  "curso": "Ciência da Computação",
+  "semestre": 4,
+  "CR": 9.5
+}
+
+for valor in estudante.values():
+  print(valor)
+```
+
+O retorno que teremos em tela é:
+
+```
+Fulana de Tal
+fulana@provedor.com.br
+Ciência da Computação
+4
+9.5
+```
+
+Ou seja, somente os valores são exibidos.
+
+**Verificando a existência de uma chave no dicionário**
+
+Verificar a existência de uma chave no dicionário pode nos poupar de um problema que quebra nosso código: tentar deletar uma chave que não existe!
+
+Em português, essa verificação poderia ser escrita da seguinte maneira:
+
+```
+SE chave (existe) NO dicionario:
+    # faça isso
+SENÃO
+    # faça aquilo
+```
+
+Em Python, essa instrução fica da seguinte maneira:
+
+```python
+if chave in dicionario:
+    # faça isso
+else:
+    # faça aquilo
+```
+
+Sendo o **else** opcional.
+
+Veja o exemplo:
+
+```python
+carro = {
+  "marca": "Ford",
+  "modelo": "Mustang",
+  "ano": 1964
+}
+
+if "modelo" in carro:
+  print("Existe a chave modelo.")
+else: 
+  print("Não existe a chave modelo.")
+
+# mostra Existe a chave modelo.
+
+if "cor" in carro:
+  print("Existe a chave cor.")
+else: 
+  print("Não existe a chave cor.")
+
+# mostra Não existe a chave cor.
+```
+
 ## Exercícios
 
-1. 
+1. Escreva um programa simples somente para cadastrar dados de um usuário e salvá-los em um dicionário. Os dados que você deverá armazenar são: nome (string), email (string), curso (string), período (int), disciplinas (lista de strings) e CR (float). Ao final do cadastro, o programa deverá mostrar o dicionário na tela com um print simples.
 
-2. 
+2. Escreva um programa em que primeiro você cadastrará 10 produtos e seus respectivos preços em um único dicionário. A chave é o nome do produto (string e sem acentuação) e o valor é o preço (float). Em seguida, o programa deverá exibir cada produto (nome e preço) e você deverá informar a quantidade que está comprando. Ao terminar, deverá aparecer na tela o valor total da compra.
 
 ---
 
-**Desafio:** 
+**Desafio:** Escreva um programa para cadastrar os dados de usuários. O programa deverá perguntar quantos usuários você deseja cadastrar. Os dados que serão cadastrados são nome e email. Os dados de cada usuário deverão ser salvos em um dicionário e, este dicionário, deverá ser salvo em uma lista. Ao final do cadastro, você terá uma lista de dicionários. Exiba essa lista na tela mostrando **Posição - Nome (Email)**. Se você tiver 2 usuários cadastrados, um com nome de João e outro com o nome de Maria, deverá aparecer na tela:
+```
+0 - João (joao@provedor.com)
+1 - Maria (maria@internet.com)
+```
