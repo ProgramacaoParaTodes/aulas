@@ -28,6 +28,8 @@ Até o momento, tivemos as seguintes aulas:
 
 [Aula 07](Aula07.md)
 
+[Aula 08](Aula08.md)
+
 O conteúdo das aulas é sobre **Lógica de Programação** e **Introdução ao [Python](https://github.com/python)**.
 
 Nas aulas online, utilizamos o [Jitsi](https://github.com/jitsi), um projeto open source muito maneiro!
