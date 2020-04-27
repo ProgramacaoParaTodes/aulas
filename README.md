@@ -12,7 +12,7 @@ Após cada aula, preparo um resumão com o que foi visto naquele dia e, às veze
 
 No final de cada aula, há uma lista com exercícios e um desafio.
 
-Até o momento, tivemos as seguintes aulas:
+Até o momento, tivemos as seguintes aulas de teoria:
 
 [Aula 01](Aula01.md)
 
